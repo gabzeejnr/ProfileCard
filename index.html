@@ -1,0 +1,161 @@
+<!DOCTYPE html />
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/style_card.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <section id="wrapper">
+      <!--PROFILE CARD-->
+      <section id="profile-card">
+        <section class="card-top">
+          <div class="image-container">
+            <img alt="" class="profile-image" src="./assets/drip.jpg" />
+          </div>
+          <div class="text">
+            <div id="card-holder-name"></div>
+            <div id="card-holder-role"></div>
+            <div id="card-holder-department"></div>
+          </div>
+          <button id="close-profile-card">X</button>
+        </section>
+        <section class="card-middle">
+          <p>About</p>
+          <div id="about-holder">
+            <p id="about-holder-text"></p>
+            <div class="holder-detail">
+              <span id="email">
+                <i class="fa-regular fa-envelope"></i>
+              </span>
+              <span id="phone-number">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <span id="location">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <span id="date">
+                <i class="fa-solid fa-calendar-day"></i>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section class="card-bottom">
+          <h2>Skills</h2>
+          <div>
+            <div class="skills">
+              <span class="skill">Product Strategy</span>
+              <span class="skill">Roadmapping</span>
+              <span class="skill">User Research</span>
+              <span class="skill">Agile</span>
+              <span class="skill">Data Analysis</span>
+            </div>
+          </div>
+        </section>
+      </section><!--PROFILE CARD-->
+
+      <section id="top">
+        <div class="top_left">
+          <div class="one">
+            <i class="fa-solid fa-users"></i>
+            <h1>People</h1>
+          </div>
+          <p>Browse and view information about team members</p>
+        </div>
+        <search class="top_right">
+          <form>
+            <input type="search" />
+            <button type="submit" id="search_button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </search>
+      </section>
+      <section id="bottom">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Department</th>
+              <th>Location</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="holder-name">Ananya Sharma</td>
+              <td class="holder-role">Product Manager</td>
+              <td class="holder-department">Product</td>
+              <td>
+                <i class="fa-solid fa-location-dot"></i>
+                Bengaluru, India
+              </td>
+              <td class="holder-email">ananya.sharma@company.com</td>
+              <td>
+                <button class="view-btn">View Details</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="holder-name">Rohan Mehta</td>
+              <td class="holder-role">Product Manager</td>
+              <td class="holder-department">Product</td>
+              <td>
+                <i class="fa-solid fa-location-dot"></i>
+                Delhi, India
+              </td>
+              <td class="holder-email">rohan.mehta@company.com</td>
+              <td>
+                <button class="view-btn">View Details</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="holder-name">Priya Nair</td>
+              <td class="holder-role">Product Manager</td>
+              <td class="holder-department">Product</td>
+              <td>
+                <i class="fa-solid fa-location-dot"></i>
+                Mumbai, India
+              </td>
+              <td class="holder-email">priya.nair@company.com</td>
+              <td>
+                <button class="view-btn">View Details</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="holder-name">Arjun Verma</td>
+              <td class="holder-role">Data Analyst</td>
+              <td class="holder-department">Analytics</td>
+              <td>
+                <i class="fa-solid fa-location-dot"></i>
+                Pune, India
+              </td>
+              <td class="holder-email">arjun.verma@company.com</td>
+              <td>
+                <button class="view-btn">View Details</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="holder-name">Sneha Iyer</td>
+              <td class="holder-role">Marketing Specialist</td>
+              <td class="holder-department">Marketing</td>
+              <td>
+                <i class="fa-solid fa-location-dot"></i>
+                Bengaluru, India
+              </td>
+              <td class="holder-email">sneha.iyer@company.com</td>
+              <td>
+                <button class="view-btn">View Details</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+    <script src="./scripts/script.js" type="module"></script>
+  </body>
+</html>
