@@ -6,6 +6,7 @@ viewButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const row = btn.closest("tr");
 
+
     const name = row.querySelector(".holder-name").innerText;
     console.log(name);
     document.querySelector("#card-holder-name").innerText = name;
@@ -23,6 +24,17 @@ viewButtons.forEach((btn) => {
     
     const location = row.querySelector(".holder-address").innerText;
     document.querySelector(".holder-detail #holder-address").innerHTML = `<i class="fa-solid fa-location-dot"></i> ${location}`;
+    
+
+    const phone = row.dataset.phone;
+    document.querySelector(".holder-detail #phone-number").innerHTML = `<i class="fa-solid fa-phone"></i> ${phone}`;
+
+    const dateJoined = row.dataset.joined;
+    document.querySelector(".holder-detail #date-joined").innerHTML = `<i class="fa-solid fa-calendar-day"></i> ${dateJoined}`;
+
+
+    const about = row.dataset.about;
+    document.querySelector("#about-holder-text").innerText = about;
 
     profileCard.style.display = "flex";
   });
