@@ -44,14 +44,4 @@ export function openCard() {
 export function closeCard() {
   overlay.style.display = "none";
   profileCard.style.display = "none";
-    }};
-
-export function openCard() {
-  overlay.style.display = "block";
-  profileCard.style.display = "flex";
-};
-
-export function closeCard() {
-  overlay.style.display = "none";
-  profileCard.style.display = "none";
-}
+    }
