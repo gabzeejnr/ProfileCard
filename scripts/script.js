@@ -21,6 +21,9 @@ viewButtons.forEach((btn) => {
     const email = row.querySelector(".holder-email").innerText;
     document.querySelector(".holder-detail #email").innerHTML = `<i class="fa-regular fa-envelope"></i> ${email}`;
     
+    const location = row.querySelector(".holder-address").innerText;
+    document.querySelector(".holder-detail #holder-address").innerHTML = `<i class="fa-solid fa-location-dot"></i> ${location}`;
+
     profileCard.style.display = "flex";
   });
 }); 

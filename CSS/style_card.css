@@ -1,8 +1,5 @@
-*{
-    border: 1px solid black;
-}  
 #profile-card{
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -15,6 +12,16 @@
   border: 1px solid black;
   border-radius: 1rem;
   background: #f5f5f5;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 #profile-card .card-top{
@@ -24,14 +31,21 @@
   align-items: center;
 }
 
-#profile-card .card-top button{
+#profile-card #close-profile-card{
   position: relative;
   margin-left: auto;
   margin-right: 1rem;
-  top: -4rem;
+  top: -3.5rem;
   font-size: 20px;
   background: none;
   border: 0px;
+}
+
+#profile-card #close-profile-card:hover{
+  cursor: pointer;
+  transform: rotate(360deg);
+  color: red;
+  transition: all 0.5s ease-in-out;
 }
 
 #profile-card .card-top > div{
@@ -95,6 +109,7 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
+  font-family:cursive
 }
 
 #profile-card .holder-detail span{
