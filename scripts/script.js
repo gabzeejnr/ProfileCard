@@ -1,40 +1,27 @@
-const profileCard = document.querySelector("#profile-card");
-const viewButtons = document.querySelectorAll(".view-btn");
-let closeProfileCard = document.querySelector("#close-profile-card");
+import {
+  viewButtons,
+  closeProfileCard,
+  overlay,
+} from "./selectors.js";
+
+import {
+  populateCard,
+  openCard,
+  closeCard,
+} from "./card.js";
 
 viewButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const row = btn.closest("tr");
 
+    populateCard(row);
+    openCard();
+  });
+});
 
-    const name = row.querySelector(".holder-name").innerText;
-    console.log(name);
-    document.querySelector("#card-holder-name").innerText = name;
-    
-    const role = row.querySelector(".holder-role").innerText;
-    document.querySelector("#card-holder-role").innerText = role;
-    console.log(role);
-    
-    const department = row.querySelector(".holder-department").innerText;
-    document.querySelector("#card-holder-department").innerText = department;
-    console.log(department);
+closeProfileCard.addEventListener("click", closeCard);
 
-    const email = row.querySelector(".holder-email").innerText;
-    document.querySelector(".holder-detail #email").innerHTML = `<i class="fa-regular fa-envelope"></i> ${email}`;
-    
-    const location = row.querySelector(".holder-address").innerText;
-    document.querySelector(".holder-detail #holder-address").innerHTML = `<i class="fa-solid fa-location-dot"></i> ${location}`;
-    
-
-    const phone = row.dataset.phone;
-    document.querySelector(".holder-detail #phone-number").innerHTML = `<i class="fa-solid fa-phone"></i> ${phone}`;
-
-    const dateJoined = row.dataset.joined;
-    document.querySelector(".holder-detail #date-joined").innerHTML = `<i class="fa-solid fa-calendar-day"></i> ${dateJoined}`;
-
-
-    const about = row.dataset.about;
-    document.querySelector("#about-holder-text").innerText = about;
+overlay.addEventListener("click", closeCard);    document.querySelector("#about-holder-text").innerText = about;
 
     profileCard.style.display = "flex";
   });
