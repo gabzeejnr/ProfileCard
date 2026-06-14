@@ -21,14 +21,4 @@ viewButtons.forEach((btn) => {
 
 closeProfileCard.addEventListener("click", closeCard);
 
-overlay.addEventListener("click", closeCard);    document.querySelector("#about-holder-text").innerText = about;
-
-    profileCard.style.display = "flex";
-  });
-}); 
-
-
-closeProfileCard.addEventListener("click", () => {
-  profileCard.style.cssText = `display: none;`;
-  console.log("Profile Card Closed");
-})
+overlay.addEventListener("click", closeCard);
